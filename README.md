@@ -67,7 +67,7 @@ WhatsApp and phone use the same number. While `contact.phone` is empty, both but
 
 ```json
 "contact": {
-  "email": "meaantonio38@gmail.com",
+  "email": "abedin.mehrdad@proton.me",
   "phone": "+34 600 000 000",
   "phoneDisplay": "+34 600 000 000"
 }

@@ -1200,7 +1200,7 @@ main:focus { outline: none; }
 }
 .action-text { display: flex; flex-direction: column; min-width: 0; }
 .action-label { font-family: var(--font-display); font-size: var(--fs-md); font-weight: 600; letter-spacing: -.015em; }
-.action-sub { color: var(--ink-3); font-size: var(--fs-sm); overflow-wrap: anywhere; }
+.action-sub { color: var(--ink-3); font-size: var(--fs-sm); overflow-wrap: break-word; }
 .action-arrow { margin-left: auto; color: var(--ink-3); transition: transform .45s var(--ease), color .3s var(--ease); }
 @media (hover: hover) and (pointer: fine) {
   .action:hover .action-icon { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
