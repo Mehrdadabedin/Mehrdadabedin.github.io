@@ -1,0 +1,31 @@
+<header class="site-header" data-header>
+  <div class="wrap header-inner">
+    <a class="brand" href="{{lang.path}}" aria-label="{{t.a11y.home}}">
+      {{> mark}}
+      <span class="brand-name" aria-hidden="true">{{site.name}}</span>
+    </a>
+    <div class="header-panel" id="site-menu" data-menu>
+      <nav class="nav" aria-label="{{t.a11y.mainNav}}">
+        <ul role="list">
+          {{#each nav}}<li><a href="#{{id}}" data-nav-link><span class="nav-num" aria-hidden="true">{{num}}</span><span class="nav-label">{{label}}</span></a></li>
+          {{/each}}
+        </ul>
+      </nav>
+      <nav class="langs" aria-label="{{t.a11y.langNav}}">
+        <ul role="list">
+          {{#each langs}}<li><a href="{{path}}" lang="{{htmlLang}}" hreflang="{{hreflang}}" data-lang="{{code}}"{{#if current}} aria-current="page"{{/if}}><span class="lang-short" aria-hidden="true">{{short}}</span><span class="lang-long">{{native}}</span></a></li>
+          {{/each}}
+        </ul>
+      </nav>
+    </div>
+    <div class="header-tools">
+      <button class="icon-btn theme-toggle" type="button" hidden data-theme-toggle data-label-dark="{{t.a11y.themeToDark}}" data-label-light="{{t.a11y.themeToLight}}" aria-label="{{t.a11y.themeToDark}}">
+        <svg class="i i-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+        <svg class="i i-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+      </button>
+      <button class="icon-btn menu-toggle" type="button" hidden data-menu-toggle aria-expanded="false" aria-controls="site-menu" data-label-open="{{t.a11y.menuOpen}}" data-label-close="{{t.a11y.menuClose}}" aria-label="{{t.a11y.menuOpen}}">
+        <span class="menu-icon" aria-hidden="true"><span></span><span></span></span>
+      </button>
+    </div>
+  </div>
+</header>

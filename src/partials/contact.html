@@ -1,0 +1,25 @@
+<section class="section section-contact" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <p class="sec-label" data-reveal><span class="sec-num">{{sec.contact}}</span><span class="sec-name">{{t.nav.contact}}</span></p>
+    <h2 class="contact-title" id="contact-title" data-reveal>{{t.contact.title | title}}</h2>
+    <div class="contact-grid">
+      <p class="contact-intro" data-reveal>{{t.contact.intro}}</p>
+      <div class="contact-main" data-reveal>
+        <p class="contact-kicker">{{t.contact.emailLabel}}</p>
+        <div class="contact-email-row">
+          <a class="contact-email" href="{{contact.mailto}}"><span class="contact-email-text">{{{contact.emailHtml}}}</span><svg class="i" aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+          <button class="copy-btn" type="button" hidden data-copy="{{site.contact.email}}" data-copied="{{t.contact.copied}}" data-failed="{{t.contact.copyFailed}}" aria-label="{{t.contact.copyLabel}}">
+            <svg class="i i-copy" aria-hidden="true"><use href="#i-copy"/></svg><svg class="i i-done" aria-hidden="true"><use href="#i-check"/></svg><span class="copy-text" aria-hidden="true">{{t.contact.copy}}</span>
+          </button>
+          <span class="sr-only" role="status" data-copy-status></span>
+        </div>
+      </div>
+    </div>
+    <ul class="contact-actions" role="list" data-reveal>
+      <li><a class="action" href="{{contact.mailto}}"><span class="action-icon" aria-hidden="true"><svg class="i"><use href="#i-mail"/></svg></span><span class="action-text"><span class="action-label">{{t.contact.write}}</span><span class="action-sub">{{site.contact.email}}</span></span><svg class="i action-arrow" aria-hidden="true"><use href="#i-arrow-ur"/></svg></a></li>
+      {{#if contact.hasPhone}}<li><a class="action" href="{{contact.whatsapp}}" rel="noopener"><span class="action-icon" aria-hidden="true"><svg class="i"><use href="#i-chat"/></svg></span><span class="action-text"><span class="action-label">{{t.contact.whatsapp}}</span><span class="action-sub">{{contact.phoneDisplay}}</span></span><svg class="i action-arrow" aria-hidden="true"><use href="#i-arrow-ur"/></svg></a></li>
+      <li><a class="action" href="{{contact.tel}}"><span class="action-icon" aria-hidden="true"><svg class="i"><use href="#i-phone"/></svg></span><span class="action-text"><span class="action-label">{{t.contact.phone}}</span><span class="action-sub">{{contact.phoneDisplay}}</span></span><svg class="i action-arrow" aria-hidden="true"><use href="#i-arrow-ur"/></svg></a></li>
+      {{/if}}<li><a class="action" href="{{site.links.github}}" rel="noopener me"><span class="action-icon" aria-hidden="true"><svg class="i"><use href="#i-code"/></svg></span><span class="action-text"><span class="action-label">{{t.contact.github}}</span><span class="action-sub">{{t.contact.githubNote}}</span></span><svg class="i action-arrow" aria-hidden="true"><use href="#i-arrow-ur"/></svg></a></li>
+    </ul>
+  </div>
+</section>

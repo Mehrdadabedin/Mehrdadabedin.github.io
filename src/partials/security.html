@@ -1,0 +1,58 @@
+<section class="section section-security" id="security" aria-labelledby="security-title">
+  <div class="wrap">
+    <div class="panel invert">
+      <header class="sec-head" data-reveal>
+        <p class="sec-label"><span class="sec-num">{{sec.security}}</span><span class="sec-name">{{t.nav.security}}</span></p>
+        <h2 class="sec-title" id="security-title">{{t.security.title | title}}</h2>
+        <p class="sec-intro">{{t.security.intro}}</p>
+      </header>
+
+      <div class="promise" data-reveal>
+        <div class="seal" aria-hidden="true">
+          <svg viewBox="0 0 160 160" focusable="false">
+            <defs><path id="seal-path" d="M80 80m-62 0a62 62 0 1 1 124 0a62 62 0 1 1-124 0"/></defs>
+            <circle class="seal-ring" cx="80" cy="80" r="76"/>
+            <circle class="seal-ring seal-ring-inner" cx="80" cy="80" r="46"/>
+            <g class="seal-text"><text><textPath href="#seal-path" textLength="389" lengthAdjust="spacing">{{t.security.seal}}</textPath></text></g>
+            <g class="seal-eye" transform="translate(56 56)"><path d="M4 24S12 11 24 11s20 13 20 13-8 13-20 13S4 24 4 24Z"/><circle cx="24" cy="24" r="6"/></g>
+          </svg>
+        </div>
+        <div class="promise-copy">
+          <p class="promise-title"><span>{{t.security.promiseA}}</span> <span class="promise-b">{{t.security.promiseB}}</span></p>
+          <p class="promise-body">{{t.security.promiseBody}}</p>
+        </div>
+      </div>
+
+      <h3 class="panel-subtitle" data-reveal>{{t.security.processTitle}}</h3>
+      <ol class="steps" role="list" data-reveal>
+        {{#each t.security.steps}}<li class="step">
+          <h4 class="step-title">{{title}}</h4>
+          <p class="step-body">{{body}}</p>
+        </li>
+        {{/each}}
+      </ol>
+
+      <div class="scope" data-reveal>
+        <div class="scope-col scope-in">
+          <h3 class="scope-title"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>{{t.security.includedTitle}}</h3>
+          <ul role="list">
+            {{#each t.security.included}}<li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span>{{this}}</span></li>
+            {{/each}}
+          </ul>
+        </div>
+        <div class="scope-col scope-out">
+          <h3 class="scope-title"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg>{{t.security.excludedTitle}}</h3>
+          <ul role="list">
+            {{#each t.security.excluded}}<li><svg class="i" aria-hidden="true"><use href="#i-x"/></svg><span>{{this}}</span></li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+
+      <div class="panel-foot" data-reveal>
+        <p class="fineprint">{{t.security.note}}</p>
+        <a class="btn btn-primary" href="{{contact.mailtoSecurity}}"><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg><span>{{t.security.cta}}</span></a>
+      </div>
+    </div>
+  </div>
+</section>

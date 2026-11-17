@@ -1,0 +1,207 @@
+{
+  "meta": {
+    "title": "Mehrdad Abedin — Arquitecto de soluciones · IA y tecnologías Microsoft",
+    "description": "Arquitecto de soluciones con casi 20 años de experiencia en desarrollo de software, consultoría TI y tecnologías Microsoft: IA, Azure, Power Platform, Dynamics 365 y desarrollo full-stack.",
+    "ogTitle": "Mehrdad Abedin — Arquitecto de soluciones",
+    "ogImageAlt": "Mehrdad Abedin. Arquitecto de soluciones: IA, tecnologías Microsoft y desarrollo full-stack."
+  },
+  "a11y": {
+    "skip": "Saltar al contenido",
+    "home": "Mehrdad Abedin, inicio",
+    "mainNav": "Principal",
+    "langNav": "Idioma",
+    "footerNav": "Secciones",
+    "menuOpen": "Abrir el menú",
+    "menuClose": "Cerrar el menú",
+    "menu": "Menú",
+    "themeToDark": "Activar el tema oscuro",
+    "themeToLight": "Activar el tema claro",
+    "newSite": "(sitio externo)"
+  },
+  "nav": {
+    "capabilities": "Capacidades",
+    "work": "Proyecto",
+    "certificates": "Certificaciones",
+    "security": "Seguridad",
+    "approach": "Enfoque",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "roles": ["Arquitecto de soluciones", "IA y tecnologías Microsoft", "Desarrollo full-stack"],
+    "lead": "Convierto problemas técnicos y de negocio *complejos* en soluciones *prácticas*, pensadas para quien las usa.",
+    "intro": "Casi 20 años de experiencia en desarrollo de software, consultoría TI, tecnologías Microsoft y arquitectura de soluciones.",
+    "ctaPrimary": "Hablemos",
+    "ctaSecondary": "Ver el proyecto destacado",
+    "specTitle": "En resumen",
+    "spec": [
+      { "k": "Experiencia", "v": "Casi 20 años" },
+      { "k": "Rol", "v": "Arquitectura de soluciones" },
+      { "k": "Ecosistema", "v": "Azure, Power Platform, Dynamics 365" },
+      { "k": "Resultado", "v": "De la idea al software que funciona" }
+    ],
+    "scroll": "Desplázate"
+  },
+  "capabilities": {
+    "title": "Un catálogo de lo que hago.",
+    "intro": "Siete áreas de trabajo, de la arquitectura al código. En los proyectos reales casi nunca van solas: lo interesante pasa donde se cruzan.",
+    "items": {
+      "ai": {
+        "title": "IA y aplicaciones con IA",
+        "body": "Aplicaciones que incorporan inteligencia artificial donde aporta valor real, desde la idea y la prueba de concepto hasta un producto que se puede usar."
+      },
+      "azure": {
+        "title": "Microsoft Azure y tecnologías Microsoft",
+        "body": "Soluciones sobre el ecosistema de Microsoft con criterio de arquitectura: qué pieza usar, cómo encajarla con el resto y cómo mantenerla en el tiempo."
+      },
+      "powerPlatform": {
+        "title": "Power Platform",
+        "body": "Aplicaciones de negocio y automatizaciones sobre Power Platform, conectadas con los sistemas que la organización ya utiliza."
+      },
+      "dynamics": {
+        "title": "Microsoft Dynamics 365",
+        "body": "Soluciones con Dynamics 365 adaptadas a cómo trabaja de verdad el negocio e integradas con el resto de sus sistemas."
+      },
+      "fullstack": {
+        "title": "Desarrollo web full-stack",
+        "body": "Aplicaciones web completas, del frontend al backend y la base de datos."
+      },
+      "integration": {
+        "title": "APIs, automatización e integraciones",
+        "body": "APIs bien diseñadas, procesos automatizados e integraciones que hacen que sistemas distintos funcionen como uno solo."
+      },
+      "data": {
+        "title": "Datos, analítica y aplicaciones de negocio",
+        "body": "Modelos de datos, analítica y aplicaciones de negocio que convierten la información en decisiones."
+      }
+    }
+  },
+  "showcase": {
+    "title": "Del modelo matemático al producto en línea.",
+    "intro": "Un ejemplo completo de cómo trabajo: un dominio exigente, un motor riguroso y una experiencia pensada para aprender.",
+    "badge": "Proyecto destacado",
+    "status": "En línea · Gratuito",
+    "tagline": "Un entrenador de ICM para póker, gratuito y construido de principio a fin.",
+    "icmTitle": "¿Qué es el ICM?",
+    "icmBody": "El ICM (Independent Chip Model) convierte las fichas de un torneo en dinero de premios. Por eso, en un torneo, una ficha ganada no vale lo mismo que una ficha perdida.",
+    "description": "Un sistema full-stack de práctica de torneos de Texas Hold'em para 9 jugadores, con un motor de coaching ICM. Juegas como Hero contra 8 rivales controlados por el ordenador, cada uno con su propia personalidad. Antes de cada decisión recibes una recomendación basada en una estrategia base y, al terminar, revisas la sesión con estadísticas, historial de manos y comentarios que tienen en cuenta el ICM.",
+    "authority": "El backend es la única fuente de verdad: todo el estado autoritativo de la partida vive en el servidor.",
+    "facts": [
+      { "value": "9", "label": "jugadores por mesa" },
+      { "value": "8", "label": "personalidades de IA" },
+      { "value": "3", "label": "modos de coach" }
+    ],
+    "highlightsTitle": "Lo más destacado",
+    "highlights": [
+      { "title": "Motor de póker real", "body": "Evaluador de manos, reglas de apuesta y botes secundarios multijugador con conservación exacta de las fichas." },
+      { "title": "Motor de torneo", "body": "Estructura de ciegas y temporizador, como en un torneo de verdad." },
+      { "title": "8 personalidades de IA", "body": "Rivales con estilos distintos y rangos que dependen de la posición y del tamaño del stack." },
+      { "title": "Matemáticas del ICM", "body": "Equity ICM exacta, presión de burbuja, prima de riesgo, motor de equity (exacto y Monte Carlo), matriz de rangos 13×13 y motor push/fold." },
+      { "title": "Coaching a tu nivel", "body": "Modos Principiante, Intermedio y Avanzado, y un modo examen que puntúa cada decisión." },
+      { "title": "También en Android", "body": "La misma aplicación empaquetada para Android con Capacitor." }
+    ],
+    "stackTitle": "Tecnologías",
+    "stackGroups": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "data": "Datos e infraestructura",
+      "quality": "Pruebas y móvil"
+    },
+    "cta": "Visitar icmbot.one",
+    "figure": {
+      "alt": "Ilustración abstracta: una mesa de póker de nueve asientos y un gráfico que compara la cuota de fichas con la cuota del premio.",
+      "caption": "Ilustración original con datos de ejemplo, no reales.",
+      "fig1": "Fig. 1 — Mesa de 9",
+      "fig2": "Fig. 2 — Fichas frente a premio",
+      "axisX": "Cuota de fichas",
+      "axisY": "Cuota del premio",
+      "diagonal": "Fichas = premio",
+      "curve": "ICM",
+      "hero": "Hero"
+    }
+  },
+  "certificates": {
+    "title": "Certificaciones de Microsoft.",
+    "intro": "Certificaciones emitidas por Microsoft.",
+    "issuer": "Microsoft",
+    "issued": "Obtenida",
+    "verify": "Verificar"
+  },
+  "security": {
+    "title": "Evaluación de seguridad ligera.",
+    "intro": "Una revisión manual y acotada de lo que tu aplicación o servicio expone, para ayudarte a detectar a tiempo los puntos débiles.",
+    "promiseA": "Solo evaluación.",
+    "promiseB": "Nunca explotación.",
+    "promiseBody": "Los hallazgos se identifican y se documentan, pero no se explotan. Sin pruebas destructivas, sin denegación de servicio ni extracción de datos, y siempre dentro del alcance acordado.",
+    "seal": "Solo evaluación · Sin explotación · ",
+    "processTitle": "Cómo funciona",
+    "steps": [
+      { "title": "Alcance y autorización", "body": "Acordamos qué se revisa y qué no. Nada empieza sin una autorización por escrito." },
+      { "title": "Revisión manual", "body": "Examen manual de la superficie expuesta: configuración, autenticación, sesiones, control de acceso y más." },
+      { "title": "Documentación", "body": "Cada hallazgo se registra con lo observado y su posible impacto, sin explotarlo en ningún momento." },
+      { "title": "Informe", "body": "Un informe claro y priorizado, con recomendaciones concretas de corrección." }
+    ],
+    "includedTitle": "Qué incluye",
+    "included": [
+      "Alcance acordado y autorización por escrito antes de empezar",
+      "Revisión de la configuración expuesta",
+      "Autenticación y gestión de sesiones",
+      "Control de acceso",
+      "Cabeceras de seguridad",
+      "Configuración de TLS",
+      "Exposición de información",
+      "Debilidades web comunes, identificadas por observación",
+      "Informe priorizado con recomendaciones de corrección"
+    ],
+    "excludedTitle": "Qué no incluye",
+    "excluded": [
+      "Explotación de vulnerabilidades",
+      "Pruebas destructivas",
+      "Denegación de servicio",
+      "Ingeniería social",
+      "Extracción de datos"
+    ],
+    "note": "Es una evaluación ligera y manual. No sustituye a un pentest completo ni a un ejercicio de red team, y no es una certificación ni una auditoría de cumplimiento.",
+    "cta": "Solicitar una evaluación",
+    "emailSubject": "Evaluación de seguridad ligera"
+  },
+  "approach": {
+    "title": "Problemas difíciles, soluciones prácticas.",
+    "quote": "Convertir ideas en software que funciona.",
+    "items": [
+      { "title": "Resolver lo difícil", "body": "Me atraen los problemas técnicos complicados. Los desmonto hasta entenderlos y busco la solución más sencilla que funcione." },
+      { "title": "Aprender y aplicar", "body": "Aprendo tecnologías nuevas y las aplico cuando aportan algo concreto, no por moda." },
+      { "title": "Diseño práctico", "body": "Soluciones pensadas para el uso real: comprensibles, mantenibles y alineadas con el negocio." },
+      { "title": "Cerca de las personas", "body": "Trabajo codo con codo con clientes y equipos. Las buenas decisiones salen de entender bien el contexto." },
+      { "title": "Prototipos y pruebas de concepto", "body": "Un prototipo temprano responde preguntas que ninguna presentación puede responder." },
+      { "title": "De la idea al software", "body": "El objetivo es siempre el mismo: software que funciona y que la gente usa." }
+    ]
+  },
+  "contact": {
+    "title": "Hablemos.",
+    "intro": "Cuéntame qué necesitas: una arquitectura, un prototipo, una evaluación de seguridad o una segunda opinión técnica.",
+    "emailLabel": "Correo electrónico",
+    "emailSubject": "Contacto desde tu web",
+    "write": "Escríbeme",
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "copyFailed": "No se pudo copiar",
+    "copyLabel": "Copiar la dirección de correo",
+    "whatsapp": "WhatsApp",
+    "whatsappText": "Hola, Mehrdad. Te escribo desde tu web.",
+    "phone": "Llamar",
+    "github": "GitHub",
+    "githubNote": "Código y proyectos"
+  },
+  "footer": {
+    "privacy": "Sin cookies, sin analítica y sin peticiones a terceros.",
+    "languages": "Idiomas",
+    "elsewhere": "En la red",
+    "toTop": "Volver arriba"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "heading": "Esta página no existe.",
+    "body": "Puede que el enlace esté roto o que la página haya cambiado de sitio.",
+    "home": "Volver al inicio"
+  }
+}

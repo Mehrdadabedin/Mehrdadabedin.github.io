@@ -1,0 +1,31 @@
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-id">
+        <a class="brand" href="{{lang.path}}" aria-label="{{t.a11y.home}}">{{> mark}}<span class="brand-name" aria-hidden="true">{{site.name}}</span></a>
+        <p class="footer-roles">{{#each t.hero.roles}}<span>{{this}}</span>{{/each}}</p>
+      </div>
+      <nav class="footer-col" aria-label="{{t.a11y.footerNav}}">
+        <p class="footer-head" aria-hidden="true">{{t.a11y.footerNav}}</p>
+        <ul role="list">{{#each nav}}<li><a href="#{{id}}">{{label}}</a></li>{{/each}}</ul>
+      </nav>
+      <div class="footer-col">
+        <p class="footer-head" id="footer-langs">{{t.footer.languages}}</p>
+        <ul role="list" aria-labelledby="footer-langs">{{#each langs}}<li><a href="{{path}}" lang="{{htmlLang}}" hreflang="{{hreflang}}" data-lang="{{code}}"{{#if current}} aria-current="page"{{/if}}>{{native}}</a></li>{{/each}}</ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-head" id="footer-elsewhere">{{t.footer.elsewhere}}</p>
+        <ul role="list" aria-labelledby="footer-elsewhere">
+          <li><a href="{{site.links.github}}" rel="noopener me">GitHub</a></li>
+          <li><a href="{{site.project.url}}" rel="noopener">{{site.project.host}}</a></li>
+          <li><a href="{{contact.mailto}}">{{t.contact.emailLabel}}</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© {{year}} {{site.name}}</p>
+      <p class="footer-privacy">{{t.footer.privacy}}</p>
+      <a class="to-top" href="#main"><span>{{t.footer.toTop}}</span><svg class="i" aria-hidden="true"><use href="#i-arrow-u"/></svg></a>
+    </div>
+  </div>
+</footer>

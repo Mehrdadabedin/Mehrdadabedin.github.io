@@ -1,0 +1,18 @@
+<section class="section" id="capabilities" aria-labelledby="capabilities-title">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <p class="sec-label"><span class="sec-num">{{sec.capabilities}}</span><span class="sec-name">{{t.nav.capabilities}}</span></p>
+      <h2 class="sec-title" id="capabilities-title">{{t.capabilities.title | title}}</h2>
+      <p class="sec-intro">{{t.capabilities.intro}}</p>
+    </header>
+    <ol class="catalog" role="list">
+      {{#each capabilities}}<li class="cat-row" data-reveal>
+        <span class="cat-num" aria-hidden="true">{{@num}}</span>
+        <h3 class="cat-title">{{title}}</h3>
+        <p class="cat-body">{{body}}</p>
+        <span class="cat-glyph" aria-hidden="true"><svg class="i"><use href="#g-{{id}}"/></svg></span>
+      </li>
+      {{/each}}
+    </ol>
+  </div>
+</section>

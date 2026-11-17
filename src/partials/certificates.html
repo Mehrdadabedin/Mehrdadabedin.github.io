@@ -1,0 +1,22 @@
+<section class="section" id="certificates" aria-labelledby="certificates-title">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <p class="sec-label"><span class="sec-num">{{sec.certificates}}</span><span class="sec-name">{{t.nav.certificates}}</span></p>
+      <h2 class="sec-title" id="certificates-title">{{t.certificates.title | title}}</h2>
+      <p class="sec-intro">{{t.certificates.intro}}</p>
+    </header>
+    <ul class="certs" role="list">
+      {{#each certs}}<li class="cert" data-reveal>
+        <div class="cert-top">
+          <span class="cert-seal" aria-hidden="true"><svg class="i"><use href="#i-seal"/></svg></span>
+          {{#if code}}<span class="cert-index">{{code}}</span>{{/if}}
+        </div>
+        <h3 class="cert-name">{{name}}</h3>
+        <p class="cert-issuer">{{@root.t.certificates.issuer}}</p>
+        {{#if date}}<p class="cert-date"><span class="cert-date-label">{{@root.t.certificates.issued}}</span> <time datetime="{{date}}">{{dateLabel}}</time></p>{{/if}}
+        {{#if url}}<a class="cert-link" href="{{url}}" rel="noopener"><span>{{@root.t.certificates.verify}}</span><span class="sr-only">: {{name}} {{@root.t.a11y.newSite}}</span><svg class="i" aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>{{/if}}
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</section>

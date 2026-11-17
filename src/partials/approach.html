@@ -1,0 +1,17 @@
+<section class="section" id="approach" aria-labelledby="approach-title">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <p class="sec-label"><span class="sec-num">{{sec.approach}}</span><span class="sec-name">{{t.nav.approach}}</span></p>
+      <h2 class="sec-title" id="approach-title">{{t.approach.title | title}}</h2>
+    </header>
+    <p class="motto" data-reveal>{{t.approach.quote}}</p>
+    <ol class="principles" role="list">
+      {{#each t.approach.items}}<li class="principle" data-reveal>
+        <span class="principle-num" aria-hidden="true">{{@num}}</span>
+        <h3 class="principle-title">{{title}}</h3>
+        <p class="principle-body">{{body}}</p>
+      </li>
+      {{/each}}
+    </ol>
+  </div>
+</section>

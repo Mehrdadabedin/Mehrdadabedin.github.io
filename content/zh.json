@@ -1,0 +1,207 @@
+{
+  "meta": {
+    "title": "Mehrdad Abedin — 解决方案架构师 · AI 与 Microsoft 技术",
+    "description": "解决方案架构师，在软件开发、IT 咨询和 Microsoft 技术领域拥有近 20 年经验，专注 AI、Azure、Power Platform、Dynamics 365 与全栈开发。",
+    "ogTitle": "Mehrdad Abedin — 解决方案架构师",
+    "ogImageAlt": "Mehrdad Abedin。解决方案架构师：AI、Microsoft 技术与全栈开发。"
+  },
+  "a11y": {
+    "skip": "跳到正文",
+    "home": "Mehrdad Abedin，返回首页",
+    "mainNav": "主导航",
+    "langNav": "语言",
+    "footerNav": "栏目",
+    "menuOpen": "打开菜单",
+    "menuClose": "关闭菜单",
+    "menu": "菜单",
+    "themeToDark": "切换到深色主题",
+    "themeToLight": "切换到浅色主题",
+    "newSite": "（外部网站）"
+  },
+  "nav": {
+    "capabilities": "能力",
+    "work": "项目",
+    "certificates": "认证",
+    "security": "安全",
+    "approach": "理念",
+    "contact": "联系"
+  },
+  "hero": {
+    "roles": ["解决方案架构师", "AI 与 Microsoft 技术", "全栈开发"],
+    "lead": "我将*复杂*的技术与业务难题，转化为*切实可行*、以使用者为本的解决方案。",
+    "intro": "近 20 年从业经验，涵盖软件开发、IT 咨询、Microsoft 技术与解决方案架构。",
+    "ctaPrimary": "一起聊聊",
+    "ctaSecondary": "查看精选项目",
+    "specTitle": "概览",
+    "spec": [
+      { "k": "经验", "v": "近 20 年" },
+      { "k": "角色", "v": "解决方案架构" },
+      { "k": "生态", "v": "Azure、Power Platform、Dynamics 365" },
+      { "k": "成果", "v": "从构想到可用的软件" }
+    ],
+    "scroll": "向下滚动"
+  },
+  "capabilities": {
+    "title": "能力目录。",
+    "intro": "七大工作领域，从架构一直到代码。真实项目很少只涉及其中一项——真正有意思的，恰恰是它们的交汇之处。",
+    "items": {
+      "ai": {
+        "title": "AI 与 AI 驱动的应用",
+        "body": "在真正能创造价值的地方引入人工智能，从最初的构想、概念验证，一直到用户真正可以使用的产品。"
+      },
+      "azure": {
+        "title": "Microsoft Azure 与 Microsoft 技术",
+        "body": "以架构师的眼光在 Microsoft 生态中构建解决方案：选用哪个组件、如何与其他部分衔接、如何长期稳定运行。"
+      },
+      "powerPlatform": {
+        "title": "Power Platform",
+        "body": "基于 Power Platform 构建业务应用与自动化流程，并与企业现有的系统打通。"
+      },
+      "dynamics": {
+        "title": "Microsoft Dynamics 365",
+        "body": "贴合企业真实业务运作方式的 Dynamics 365 解决方案，并与其他系统深度集成。"
+      },
+      "fullstack": {
+        "title": "全栈 Web 开发",
+        "body": "完整的 Web 应用，从前端、后端一直到数据库。"
+      },
+      "integration": {
+        "title": "API、自动化与系统集成",
+        "body": "设计良好的 API、自动化流程与系统集成，让彼此独立的系统协同运转、浑然一体。"
+      },
+      "data": {
+        "title": "数据、分析与业务应用",
+        "body": "数据模型、数据分析与业务应用，把信息转化为决策。"
+      }
+    }
+  },
+  "showcase": {
+    "title": "从数学模型到上线产品。",
+    "intro": "一个完整体现我工作方式的案例：高要求的领域、严谨的引擎，以及为学习而设计的体验。",
+    "badge": "精选项目",
+    "status": "已上线 · 免费",
+    "tagline": "一款免费的扑克 ICM 训练工具，端到端完整打造。",
+    "icmTitle": "什么是 ICM？",
+    "icmBody": "ICM（独立筹码模型，Independent Chip Model）把锦标赛筹码换算成奖金价值。正因如此，在锦标赛中赢到的一个筹码，与输掉的一个筹码价值并不相等。",
+    "description": "一套全栈的 9 人德州扑克锦标赛练习系统，内置 ICM 教练引擎。您以 Hero 身份对阵 8 位电脑对手，每位对手都有鲜明的个性。每次决策前，系统都会给出基准策略建议；练习结束后，您可以借助统计数据、手牌记录和结合 ICM 的反馈对整场练习进行复盘。",
+    "authority": "后端是唯一可信数据源：所有权威的牌局状态都由服务器掌控。",
+    "facts": [
+      { "value": "9", "label": "每桌玩家数" },
+      { "value": "8", "label": "AI 对手性格" },
+      { "value": "3", "label": "教练模式" }
+    ],
+    "highlightsTitle": "亮点",
+    "highlights": [
+      { "title": "真正的扑克引擎", "body": "牌力评估器、下注规则，以及多人底池的边池计算，筹码严格守恒。" },
+      { "title": "锦标赛引擎", "body": "盲注结构与计时器，与真实锦标赛一致。" },
+      { "title": "8 种 AI 性格", "body": "对手风格各异，其范围取决于位置和筹码量。" },
+      { "title": "ICM 数学", "body": "精确 ICM 权益、泡沫期压力、风险溢价、权益计算引擎（精确计算与蒙特卡洛模拟）、13×13 范围矩阵，以及推弃（push/fold）引擎。" },
+      { "title": "因材施教", "body": "初级、中级、高级三种教练模式，另有测验模式为每一个决策打分。" },
+      { "title": "同样支持 Android", "body": "同一款应用，通过 Capacitor 打包为 Android 版本。" }
+    ],
+    "stackTitle": "技术栈",
+    "stackGroups": {
+      "frontend": "前端",
+      "backend": "后端",
+      "data": "数据与基础设施",
+      "quality": "测试与移动端"
+    },
+    "cta": "访问 icmbot.one",
+    "figure": {
+      "alt": "抽象插图：一张九人扑克桌，以及一幅对比筹码占比与奖金占比的图表。",
+      "caption": "原创插图，使用示例数据，并非真实结果。",
+      "fig1": "图 1 · 九人桌",
+      "fig2": "图 2 · 筹码与奖金",
+      "axisX": "筹码占比",
+      "axisY": "奖金占比",
+      "diagonal": "筹码 = 奖金",
+      "curve": "ICM",
+      "hero": "Hero"
+    }
+  },
+  "certificates": {
+    "title": "Microsoft 认证。",
+    "intro": "由 Microsoft 颁发的认证。",
+    "issuer": "Microsoft",
+    "issued": "获得时间",
+    "verify": "验证"
+  },
+  "security": {
+    "title": "轻量级安全评估。",
+    "intro": "针对您的应用或服务对外暴露的部分，进行聚焦的人工审查，帮助您及早发现薄弱环节。",
+    "promiseA": "只做评估。",
+    "promiseB": "绝不利用漏洞。",
+    "promiseBody": "所有发现只识别、只记录，绝不加以利用。不做破坏性测试，不做拒绝服务测试，不提取数据，所有工作均限定在约定范围之内。",
+    "seal": "只做评估 · 绝不利用 · 只做评估 · 绝不利用 · ",
+    "processTitle": "工作流程",
+    "steps": [
+      { "title": "范围与授权", "body": "双方明确哪些在评估范围内、哪些不在。未获书面授权，任何工作都不会开始。" },
+      { "title": "人工审查", "body": "亲手检查对外暴露的攻击面：配置、身份验证、会话、访问控制等。" },
+      { "title": "记录发现", "body": "每项发现都会记录观察到的情况及其潜在影响，自始至终不加利用。" },
+      { "title": "评估报告", "body": "一份清晰、按优先级排序的报告，附具体的修复建议。" }
+    ],
+    "includedTitle": "包含内容",
+    "included": [
+      "开工前明确评估范围并取得书面授权",
+      "对外暴露配置的审查",
+      "身份验证与会话管理",
+      "访问控制",
+      "HTTP 安全响应头",
+      "TLS 配置",
+      "信息泄露",
+      "常见 Web 安全弱点（通过观察识别）",
+      "按优先级排序的报告及修复建议"
+    ],
+    "excludedTitle": "不包含内容",
+    "excluded": [
+      "漏洞利用",
+      "破坏性测试",
+      "拒绝服务（DoS）测试",
+      "社会工程学",
+      "数据提取"
+    ],
+    "note": "这是一项轻量级的人工评估，不能替代完整的渗透测试或红队演练，也不构成任何认证或合规审计。",
+    "cta": "申请评估",
+    "emailSubject": "轻量级安全评估咨询"
+  },
+  "approach": {
+    "title": "直面难题，务实求解。",
+    "quote": "把想法变成真正可用的软件。",
+    "items": [
+      { "title": "攻克难点", "body": "我天生喜欢有难度的技术问题。先把问题层层拆解、理清脉络，再寻找最简单可行的方案。" },
+      { "title": "边学边用", "body": "我持续学习新技术，并在它们能带来实际价值时加以应用，而不是为了追赶潮流。" },
+      { "title": "务实设计", "body": "为真实使用场景而设计的解决方案：易于理解、便于维护，并与业务目标保持一致。" },
+      { "title": "贴近客户与团队", "body": "我与客户和团队并肩协作。好的决策，源于对业务背景的深入理解。" },
+      { "title": "原型与概念验证", "body": "一个早期原型，能回答任何演示文稿都回答不了的问题。" },
+      { "title": "从构想到软件", "body": "目标始终如一：做出真正能用、而且真正有人在用的软件。" }
+    ]
+  },
+  "contact": {
+    "title": "一起聊聊。",
+    "intro": "告诉我您的需求——架构设计、原型开发、安全评估，或是一份技术上的第二意见。",
+    "emailLabel": "电子邮件",
+    "emailSubject": "来自您网站的咨询",
+    "write": "发送邮件",
+    "copy": "复制",
+    "copied": "已复制",
+    "copyFailed": "复制失败",
+    "copyLabel": "复制邮箱地址",
+    "whatsapp": "WhatsApp",
+    "whatsappText": "您好，Mehrdad，我是通过您的网站联系您的。",
+    "phone": "致电",
+    "github": "GitHub",
+    "githubNote": "代码与项目"
+  },
+  "footer": {
+    "privacy": "无 Cookie、无数据统计、无第三方请求。",
+    "languages": "语言",
+    "elsewhere": "其他渠道",
+    "toTop": "返回顶部"
+  },
+  "notFound": {
+    "title": "页面未找到",
+    "heading": "此页面不存在。",
+    "body": "链接可能已失效，或者页面已被移动。",
+    "home": "返回首页"
+  }
+}

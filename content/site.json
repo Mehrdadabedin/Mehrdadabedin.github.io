@@ -1,0 +1,117 @@
+{
+  "url": "https://mehrdadabedin.github.io",
+  "name": "Mehrdad Abedin",
+  "defaultLanguage": "es",
+  "languages": [
+    {
+      "code": "es",
+      "path": "/",
+      "htmlLang": "es",
+      "hreflang": "es",
+      "ogLocale": "es_ES",
+      "native": "Español",
+      "short": "ES"
+    },
+    {
+      "code": "en",
+      "path": "/en/",
+      "htmlLang": "en",
+      "hreflang": "en",
+      "ogLocale": "en_US",
+      "native": "English",
+      "short": "EN"
+    },
+    {
+      "code": "zh",
+      "path": "/zh/",
+      "htmlLang": "zh-Hans",
+      "hreflang": "zh-Hans",
+      "ogLocale": "zh_CN",
+      "native": "中文",
+      "short": "中文"
+    }
+  ],
+  "contact": {
+    "email": "meaantonio38@gmail.com",
+    "phone": "+34699668102",
+    "phoneDisplay": "+34 699 66 81 02"
+  },
+  "links": {
+    "github": "https://github.com/Mehrdadabedin"
+  },
+  "capabilities": [
+    "ai",
+    "azure",
+    "powerPlatform",
+    "dynamics",
+    "fullstack",
+    "integration",
+    "data"
+  ],
+  "certificates": [
+    {
+      "name": "Microsoft Certified: Dynamics 365 Finance and Operations Apps Solution Architect Expert",
+      "code": "MB-700"
+    },
+    {
+      "name": "Microsoft Certified: Dynamics 365 Finance Functional Consultant Associate",
+      "code": "MB-310"
+    },
+    {
+      "name": "Microsoft Certified: Dynamics 365 Fundamentals (ERP)",
+      "code": "MB-920"
+    },
+    {
+      "name": "Microsoft Certified: Dynamics 365 Fundamentals (CRM)",
+      "code": "MB-910"
+    },
+    {
+      "name": "Microsoft Certified: Power Platform Fundamentals",
+      "code": "PL-900"
+    },
+    {
+      "name": "Microsoft 365 Certified: Fundamentals",
+      "code": "MS-900"
+    }
+  ],
+  "project": {
+    "name": "ICM Master",
+    "url": "https://icmbot.one",
+    "host": "icmbot.one",
+    "stack": [
+      {
+        "group": "frontend",
+        "items": [
+          "React 18",
+          "TypeScript (strict)",
+          "Vite"
+        ]
+      },
+      {
+        "group": "backend",
+        "items": [
+          "Python 3.12",
+          "FastAPI",
+          "Pydantic v2",
+          "SQLAlchemy 2",
+          "Alembic"
+        ]
+      },
+      {
+        "group": "data",
+        "items": [
+          "PostgreSQL 16",
+          "Docker"
+        ]
+      },
+      {
+        "group": "quality",
+        "items": [
+          "Vitest",
+          "Playwright",
+          "Capacitor"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+<section class="section" id="work" aria-labelledby="work-title">
+  <div class="wrap">
+    <header class="sec-head" data-reveal>
+      <p class="sec-label"><span class="sec-num">{{sec.work}}</span><span class="sec-name">{{t.nav.work}}</span></p>
+      <h2 class="sec-title" id="work-title">{{t.showcase.title | title}}</h2>
+      <p class="sec-intro">{{t.showcase.intro}}</p>
+    </header>
+
+    <article class="case" aria-labelledby="case-title" data-glow>
+      <div class="case-main" data-reveal>
+        <div class="case-copy">
+          <p class="case-meta"><span class="badge">{{t.showcase.badge}}</span><span class="case-status"><span class="live-dot" aria-hidden="true"></span>{{t.showcase.status}}</span></p>
+          <h3 class="case-title" id="case-title">{{site.project.name}}</h3>
+          <p class="case-tagline">{{t.showcase.tagline}}</p>
+          <div class="case-icm">
+            <p class="case-icm-title">{{t.showcase.icmTitle}}</p>
+            <p>{{t.showcase.icmBody}}</p>
+          </div>
+          <p class="case-desc">{{t.showcase.description}}</p>
+          <ul class="case-facts" role="list">
+            {{#each t.showcase.facts}}<li><span class="fact-value">{{value}}</span><span class="fact-label">{{label}}</span></li>
+            {{/each}}
+          </ul>
+          <a class="btn btn-primary case-cta" href="{{site.project.url}}" rel="noopener"><span>{{t.showcase.cta}}</span><span class="sr-only"> {{t.a11y.newSite}}</span><svg class="i" aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+        </div>
+        {{> icm-figure}}
+      </div>
+
+      <div class="case-detail" data-reveal>
+        <h4 class="case-subtitle">{{t.showcase.highlightsTitle}}</h4>
+        <ol class="highlights" role="list">
+          {{#each t.showcase.highlights}}<li class="hl">
+            <h5 class="hl-title">{{title}}</h5>
+            <p class="hl-body">{{body}}</p>
+          </li>
+          {{/each}}
+        </ol>
+        <p class="case-authority"><svg class="i" aria-hidden="true"><use href="#i-seal"/></svg><span>{{t.showcase.authority}}</span></p>
+      </div>
+
+      <div class="case-stack" data-reveal>
+        <h4 class="case-subtitle">{{t.showcase.stackTitle}}</h4>
+        <div class="stack-groups">
+          {{#each stack}}<div class="stack-group">
+            <p class="stack-label">{{label}}</p>
+            <ul class="chips" role="list">{{#each items}}<li class="chip">{{this}}</li>{{/each}}</ul>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </article>
+  </div>
+</section>

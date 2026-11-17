@@ -1,0 +1,49 @@
+<figure class="case-visual">
+  <div class="fig-frame">
+    <svg class="fig" viewBox="0 0 600 790" role="img" aria-label="{{t.showcase.figure.alt}}" focusable="false">
+      <text class="fig-label" x="24" y="34">{{t.showcase.figure.fig1}}</text>
+      <g class="fig-table">
+        <ellipse class="fig-rim" cx="{{icm.table.cx}}" cy="{{icm.table.cy}}" rx="{{icm.table.rimX}}" ry="{{icm.table.rimY}}"/>
+        <ellipse class="fig-felt" cx="{{icm.table.cx}}" cy="{{icm.table.cy}}" rx="{{icm.table.rx}}" ry="{{icm.table.ry}}"/>
+        <ellipse class="fig-rail" cx="{{icm.table.cx}}" cy="{{icm.table.cy}}" rx="{{icm.table.railX}}" ry="{{icm.table.railY}}"/>
+        <g class="fig-pot">
+          {{#each icm.pot}}<ellipse cx="{{icm.table.cx}}" cy="{{y}}" rx="22" ry="7"/>
+          {{/each}}
+        </g>
+        <g class="fig-seats">
+          {{#each icm.seats}}<g class="fig-seat{{#if hero}} is-hero{{/if}}{{#if leader}} is-leader{{/if}}">
+            <circle cx="{{cx}}" cy="{{cy}}" r="{{r}}"/>
+            <circle class="fig-seat-core" cx="{{cx}}" cy="{{cy}}" r="{{core}}"/>
+          </g>
+          {{/each}}
+        </g>
+        <g class="fig-dealer"><circle cx="{{icm.dealer.x}}" cy="{{icm.dealer.y}}" r="11"/><text x="{{icm.dealer.x}}" y="{{icm.dealer.ty}}">D</text></g>
+        <text class="fig-hero-label" x="{{icm.heroSeat.cx}}" y="{{icm.heroSeat.labelY}}">{{t.showcase.figure.hero}}</text>
+      </g>
+      <line class="fig-divider" x1="24" y1="410" x2="576" y2="410"/>
+      <text class="fig-label" x="24" y="446">{{t.showcase.figure.fig2}}</text>
+      <g class="fig-chart">
+        {{#each icm.gridY}}<line class="fig-grid" x1="{{icm.plot.x0}}" y1="{{y}}" x2="{{icm.plot.x1}}" y2="{{y}}"/>
+        <text class="fig-tick" x="{{icm.plot.tickYx}}" y="{{ty}}" text-anchor="end">{{label}}</text>
+        {{/each}}
+        {{#each icm.gridX}}<text class="fig-tick" x="{{x}}" y="{{icm.plot.tickXy}}" text-anchor="middle">{{label}}</text>
+        {{/each}}
+        <path class="fig-area" d="{{icm.area}}"/>
+        <line class="fig-axis" x1="{{icm.plot.x0}}" y1="{{icm.plot.y1}}" x2="{{icm.plot.x1}}" y2="{{icm.plot.y1}}"/>
+        <line class="fig-axis" x1="{{icm.plot.x0}}" y1="{{icm.plot.y0}}" x2="{{icm.plot.x0}}" y2="{{icm.plot.y1}}"/>
+        <path class="fig-diag" d="{{icm.diag}}"/>
+        <path class="fig-curve" d="{{icm.curve}}" pathLength="1"/>
+        <path class="fig-guide" d="{{icm.heroGuide}}"/>
+        {{#each icm.points}}<circle class="fig-point{{#if hero}} is-hero{{/if}}{{#if leader}} is-leader{{/if}}" cx="{{x}}" cy="{{y}}" r="{{#if hero}}7{{else}}{{#if leader}}6{{else}}4.5{{/if}}{{/if}}"/>
+        {{/each}}
+        <circle class="fig-point-ring" cx="{{icm.heroPoint.x}}" cy="{{icm.heroPoint.y}}" r="14"/>
+        <text class="fig-note fig-note-hero" x="{{icm.heroPoint.lx}}" y="{{icm.heroPoint.ly}}" text-anchor="end">{{t.showcase.figure.hero}}</text>
+        <text class="fig-note" x="{{icm.labels.diagX}}" y="{{icm.labels.diagY}}" text-anchor="end">{{t.showcase.figure.diagonal}}</text>
+        <text class="fig-note fig-note-curve" x="{{icm.labels.curveX}}" y="{{icm.labels.curveY}}" text-anchor="end">{{t.showcase.figure.curve}}</text>
+        <text class="fig-axis-title" x="{{icm.labels.axisXx}}" y="{{icm.labels.axisXy}}" text-anchor="middle">{{t.showcase.figure.axisX}}</text>
+        <text class="fig-axis-title" transform="translate({{icm.labels.axisYx}} {{icm.labels.axisYy}}) rotate(-90)" text-anchor="middle">{{t.showcase.figure.axisY}}</text>
+      </g>
+    </svg>
+  </div>
+  <figcaption class="fig-caption">{{t.showcase.figure.caption}}</figcaption>
+</figure>

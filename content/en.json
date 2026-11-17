@@ -1,0 +1,207 @@
+{
+  "meta": {
+    "title": "Mehrdad Abedin — Solution Architect · AI & Microsoft Technologies",
+    "description": "Solution architect with nearly 20 years of experience in software development, IT consulting and Microsoft technologies: AI, Azure, Power Platform, Dynamics 365 and full-stack development.",
+    "ogTitle": "Mehrdad Abedin — Solution Architect",
+    "ogImageAlt": "Mehrdad Abedin. Solution architect: AI, Microsoft technologies and full-stack development."
+  },
+  "a11y": {
+    "skip": "Skip to content",
+    "home": "Mehrdad Abedin, home",
+    "mainNav": "Main",
+    "langNav": "Language",
+    "footerNav": "Sections",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "menu": "Menu",
+    "themeToDark": "Switch to dark theme",
+    "themeToLight": "Switch to light theme",
+    "newSite": "(external site)"
+  },
+  "nav": {
+    "capabilities": "Capabilities",
+    "work": "Work",
+    "certificates": "Certifications",
+    "security": "Security",
+    "approach": "Approach",
+    "contact": "Contact"
+  },
+  "hero": {
+    "roles": ["Solution Architect", "AI & Microsoft Technologies", "Full-Stack Development"],
+    "lead": "I turn *complex* technical and business problems into *practical* solutions, built around the people who use them.",
+    "intro": "Nearly 20 years of experience across software development, IT consulting, Microsoft technologies and solution architecture.",
+    "ctaPrimary": "Let's talk",
+    "ctaSecondary": "See featured work",
+    "specTitle": "At a glance",
+    "spec": [
+      { "k": "Experience", "v": "Nearly 20 years" },
+      { "k": "Role", "v": "Solution architecture" },
+      { "k": "Ecosystem", "v": "Azure, Power Platform, Dynamics 365" },
+      { "k": "Outcome", "v": "From idea to working software" }
+    ],
+    "scroll": "Scroll"
+  },
+  "capabilities": {
+    "title": "A catalogue of what I do.",
+    "intro": "Seven areas of work, from architecture down to code. Real projects rarely touch just one of them — the interesting part is where they meet.",
+    "items": {
+      "ai": {
+        "title": "AI & AI-powered applications",
+        "body": "Applications that bring in artificial intelligence where it adds real value, from the first idea and proof of concept to a product people can use."
+      },
+      "azure": {
+        "title": "Microsoft Azure & Microsoft technologies",
+        "body": "Solutions on the Microsoft ecosystem with an architect's judgement: which piece to use, how it fits with the rest, and how to keep it healthy over time."
+      },
+      "powerPlatform": {
+        "title": "Power Platform",
+        "body": "Business apps and automations on Power Platform, connected to the systems the organisation already relies on."
+      },
+      "dynamics": {
+        "title": "Microsoft Dynamics 365",
+        "body": "Dynamics 365 solutions shaped around how the business actually works, and integrated with the rest of its systems."
+      },
+      "fullstack": {
+        "title": "Full-stack web development",
+        "body": "Complete web applications, from the front end through the back end to the database."
+      },
+      "integration": {
+        "title": "APIs, automation & integrations",
+        "body": "Well-designed APIs, automated processes and integrations that make separate systems behave as one."
+      },
+      "data": {
+        "title": "Data, analytics & business applications",
+        "body": "Data models, analytics and business applications that turn information into decisions."
+      }
+    }
+  },
+  "showcase": {
+    "title": "From mathematical model to live product.",
+    "intro": "A complete example of how I work: a demanding domain, a rigorous engine and an experience designed for learning.",
+    "badge": "Featured project",
+    "status": "Live · Free",
+    "tagline": "A free poker ICM trainer, built end to end.",
+    "icmTitle": "What is ICM?",
+    "icmBody": "ICM (the Independent Chip Model) turns tournament chips into prize money. That is why, in a tournament, a chip you win is not worth the same as a chip you lose.",
+    "description": "A full-stack 9-player Texas Hold'em tournament practice system with an ICM coaching engine. You play as Hero against 8 computer opponents, each with a distinct personality. Before every decision you get a baseline-strategy recommendation, and afterwards you review the session with statistics, hand history and ICM-aware feedback.",
+    "authority": "The backend is the single source of truth: it owns all authoritative game state.",
+    "facts": [
+      { "value": "9", "label": "players per table" },
+      { "value": "8", "label": "AI personalities" },
+      { "value": "3", "label": "coach modes" }
+    ],
+    "highlightsTitle": "Highlights",
+    "highlights": [
+      { "title": "A real poker engine", "body": "Hand evaluator, betting rules and multiway side pots with exact chip conservation." },
+      { "title": "Tournament engine", "body": "Blind structure and timer, just like a real tournament." },
+      { "title": "8 AI personalities", "body": "Opponents with distinct styles and ranges that depend on position and stack size." },
+      { "title": "ICM mathematics", "body": "Exact ICM equity, bubble pressure, risk premium, an equity engine (exact and Monte Carlo), a 13×13 range matrix and a push/fold engine." },
+      { "title": "Coaching at your level", "body": "Beginner, Intermediate and Advanced coach modes, plus a test mode that grades every decision." },
+      { "title": "On Android too", "body": "The same app, packaged for Android with Capacitor." }
+    ],
+    "stackTitle": "Stack",
+    "stackGroups": {
+      "frontend": "Front end",
+      "backend": "Back end",
+      "data": "Data & infrastructure",
+      "quality": "Testing & mobile"
+    },
+    "cta": "Visit icmbot.one",
+    "figure": {
+      "alt": "Abstract illustration: a nine-seat poker table and a chart comparing chip share with prize share.",
+      "caption": "Original illustration with sample data, not real results.",
+      "fig1": "Fig. 1 — 9-handed table",
+      "fig2": "Fig. 2 — Chips vs prize",
+      "axisX": "Chip share",
+      "axisY": "Prize share",
+      "diagonal": "Chips = prize",
+      "curve": "ICM",
+      "hero": "Hero"
+    }
+  },
+  "certificates": {
+    "title": "Microsoft certifications.",
+    "intro": "Certifications issued by Microsoft.",
+    "issuer": "Microsoft",
+    "issued": "Earned",
+    "verify": "Verify"
+  },
+  "security": {
+    "title": "Light security assessment.",
+    "intro": "A focused, manual review of what your application or service exposes, to help you spot weak spots early.",
+    "promiseA": "Assessment only.",
+    "promiseB": "Never exploitation.",
+    "promiseBody": "Findings are identified and documented, never exploited. No destructive testing, no denial of service, no data extraction, and the work stays within the agreed scope.",
+    "seal": "Assessment only · No exploitation · ",
+    "processTitle": "How it works",
+    "steps": [
+      { "title": "Scope & authorisation", "body": "We agree what is in scope and what is not. Nothing starts without written authorisation." },
+      { "title": "Manual review", "body": "A hands-on look at the exposed surface: configuration, authentication, sessions, access control and more." },
+      { "title": "Documentation", "body": "Each finding is recorded with what was observed and its potential impact — and never exploited." },
+      { "title": "Report", "body": "A clear, prioritised report with concrete remediation guidance." }
+    ],
+    "includedTitle": "What's included",
+    "included": [
+      "Agreed scope and written authorisation before any work starts",
+      "Review of exposed configuration",
+      "Authentication and session handling",
+      "Access control",
+      "Security headers",
+      "TLS configuration",
+      "Information exposure",
+      "Common web weaknesses, identified by observation",
+      "Prioritised report with remediation guidance"
+    ],
+    "excludedTitle": "What's not included",
+    "excluded": [
+      "Exploitation of vulnerabilities",
+      "Destructive testing",
+      "Denial of service",
+      "Social engineering",
+      "Data extraction"
+    ],
+    "note": "This is a light, manual assessment. It does not replace a full penetration test or a red-team exercise, and it is not a certification or compliance audit.",
+    "cta": "Request an assessment",
+    "emailSubject": "Light security assessment"
+  },
+  "approach": {
+    "title": "Hard problems, practical solutions.",
+    "quote": "Turning ideas into working software.",
+    "items": [
+      { "title": "Solving the hard part", "body": "I'm drawn to difficult technical problems. I take them apart until they make sense, then look for the simplest solution that works." },
+      { "title": "Learning, then applying", "body": "I pick up new technologies and use them when they bring something concrete — not because they're fashionable." },
+      { "title": "Practical design", "body": "Solutions built for real use: understandable, maintainable and aligned with the business." },
+      { "title": "Close to people", "body": "I work side by side with customers and teams. Good decisions come from understanding the context well." },
+      { "title": "Prototypes & proofs of concept", "body": "An early prototype answers questions that no slide deck ever can." },
+      { "title": "From idea to software", "body": "The goal is always the same: software that works, and that people actually use." }
+    ]
+  },
+  "contact": {
+    "title": "Let's talk.",
+    "intro": "Tell me what you need — an architecture, a prototype, a security assessment or a technical second opinion.",
+    "emailLabel": "Email",
+    "emailSubject": "Hello from your website",
+    "write": "Write to me",
+    "copy": "Copy",
+    "copied": "Copied",
+    "copyFailed": "Couldn't copy",
+    "copyLabel": "Copy email address",
+    "whatsapp": "WhatsApp",
+    "whatsappText": "Hi Mehrdad, I'm reaching out from your website.",
+    "phone": "Call",
+    "github": "GitHub",
+    "githubNote": "Code and projects"
+  },
+  "footer": {
+    "privacy": "No cookies, no analytics, no third-party requests.",
+    "languages": "Languages",
+    "elsewhere": "Elsewhere",
+    "toTop": "Back to top"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "heading": "This page doesn't exist.",
+    "body": "The link may be broken, or the page may have moved.",
+    "home": "Back to the homepage"
+  }
+}

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="{{lang.htmlLang}}" dir="ltr" data-lang="{{lang.code}}">
+<head>
+{{> head}}
+<title>{{t.notFound.title}} — {{site.name}}</title>
+<meta name="robots" content="noindex">
+<script src="{{assets.js}}" defer></script>
+</head>
+<body class="page-404">
+{{> sprite}}
+<a class="skip" href="#main">{{t.a11y.skip}}</a>
+<header class="site-header site-header-min" data-header>
+  <div class="wrap header-inner">
+    <a class="brand" href="{{lang.path}}" aria-label="{{t.a11y.home}}">{{> mark}}<span class="brand-name" aria-hidden="true">{{site.name}}</span></a>
+    <div class="header-tools">
+      <button class="icon-btn theme-toggle" type="button" hidden data-theme-toggle data-label-dark="{{t.a11y.themeToDark}}" data-label-light="{{t.a11y.themeToLight}}" aria-label="{{t.a11y.themeToDark}}">
+        <svg class="i i-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+        <svg class="i i-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<main id="main" tabindex="-1" class="nf">
+  <div class="wrap nf-inner">
+    <p class="nf-code" aria-hidden="true">404</p>
+    <h1 class="nf-title">{{t.notFound.heading | title}}</h1>
+    <p class="nf-body">{{t.notFound.body}}</p>
+    <ul class="nf-links" role="list">
+      {{#each notFoundLinks}}<li><a class="action" href="{{path}}" lang="{{htmlLang}}" hreflang="{{hreflang}}" data-lang="{{code}}"><span class="action-text"><span class="action-label">{{home}}</span><span class="action-sub">{{native}}</span></span><svg class="i action-arrow" aria-hidden="true"><use href="#i-arrow-r"/></svg></a></li>
+      {{/each}}
+    </ul>
+  </div>
+</main>
+</body>
+</html>
