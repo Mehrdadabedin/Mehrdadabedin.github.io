@@ -75,7 +75,7 @@
     }
   ],
   "project": {
-    "name": "ICM Master",
+    "name": "ICMBot",
     "url": "https://icmbot.one",
     "host": "icmbot.one",
     "stack": [
