@@ -601,6 +601,8 @@ async function build() {
     return { url: `${base}/og/${code}.svg`, type: 'image/svg+xml' };
   };
 
+  const manifestIcons = [{ src: '/favicon.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'any' }];
+  for (const sz of [192, 512]) if (has(`icon-${sz}.png`)) manifestIcons.push({ src: `/icon-${sz}.png`, sizes: `${sz}x${sz}`, type: 'image/png', purpose: 'any' });
   const written = [];
   for (const l of langs) {
     const t = dicts[l.code];
@@ -683,6 +685,107 @@ async function build() {
     const rel = l.path === '/' ? 'index.html' : `${l.path.slice(1)}index.html`;
     await write(rel, html);
     written.push(rel);
+
+    // Per-language plain-text files for LLMs and AI agents, and a per-language manifest.
+    const plain = (x) => String(x).replace(/\*/g, '').trim();
+    const m = t.machine;
+    const stop = l.code === 'zh' ? '。' : '. ';
+    const colon = l.code === 'zh' ? '：' : ': ';
+    const langLines = langs.map((x) => `- [${x.native}](${base}${x.path}) — ${base}${x.path}llms.txt`);
+    const contactLines = [
+      `- ${m.email}${colon}${site.contact.email}`,
+      ...(hasPhone ? [`- WhatsApp: https://wa.me/${digits}`, `- ${m.phone}${colon}${contact.phoneDisplay}`] : []),
+      `- GitHub: ${site.links.github}`,
+    ];
+    const llms = [
+      `# ${site.name}`,
+      '',
+      `> ${headline}${stop}${m.summary}`,
+      '',
+      `${m.page}${colon}${canonical}`,
+      '',
+      `## ${m.about}`,
+      '',
+      plain(t.hero.lead),
+      plain(t.hero.intro),
+      '',
+      `## ${m.capabilities}`,
+      '',
+      ...site.capabilities.map((id) => `- ${t.capabilities.items[id].title}: ${plain(t.capabilities.items[id].body)}`),
+      '',
+      `## ${m.project}`,
+      '',
+      `- [${site.project.name}](${site.project.url}): ${plain(t.showcase.tagline)} ${plain(t.showcase.description)}`,
+      ...t.showcase.highlights.map((h) => `- ${h.title}: ${plain(h.body)}`),
+      `- ${t.showcase.stackTitle}: ${site.project.stack.flatMap((g) => g.items).join(', ')}`,
+      '',
+      ...(hasCerts ? [`## ${m.certificates}`, '', ...certs.map((c) => `- ${c.name}${c.code ? ` (${c.code})` : ''}`), ''] : []),
+      `## ${m.security}`,
+      '',
+      `${plain(t.security.intro)} ${plain(t.security.promiseA)} ${plain(t.security.promiseB)} ${plain(t.security.promiseBody)}`,
+      '',
+      `${m.included}${colon.trim()}`,
+      ...t.security.included.map((x) => `- ${plain(x)}`),
+      '',
+      `${m.excluded}${colon.trim()}`,
+      ...t.security.excluded.map((x) => `- ${plain(x)}`),
+      '',
+      plain(t.security.note),
+      '',
+      `## ${m.contact}`,
+      '',
+      ...contactLines,
+      '',
+      `## ${m.languages}`,
+      '',
+      ...langLines,
+      '',
+    ].join('\n');
+    const agent = [
+      `# ${site.name} — ${m.agentTitle}`,
+      '',
+      m.agentIntro,
+      '',
+      `${m.page}${colon}${canonical}`,
+      `${m.agentDetails}${colon}${canonical}llms.txt`,
+      '',
+      `## ${m.about}`,
+      '',
+      `${site.name} — ${headline}${stop}${plain(t.hero.intro)}`,
+      '',
+      `## ${m.agentAllowed}`,
+      '',
+      ...m.agentAllowedItems.map((x) => `- ${x}`),
+      '',
+      `## ${m.agentRules}`,
+      '',
+      ...m.agentRulesItems.map((x) => `- ${x}`),
+      '',
+      `## ${m.contact}`,
+      '',
+      ...contactLines,
+      '',
+      `## ${m.languages}`,
+      '',
+      ...langs.map((x) => `- ${x.native}: ${base}${x.path} — ${base}${x.path}agent.txt`),
+      '',
+    ].join('\n');
+    const dir = l.path === '/' ? '' : l.path.slice(1);
+    for (const name of ['llms.txt', 'llm.txt']) await write(`${dir}${name}`, llms);
+    for (const name of ['agent.txt', 'agents.txt']) await write(`${dir}${name}`, agent);
+    await write(`${dir}site.webmanifest`, `${JSON.stringify({
+      name: `${site.name} — ${t.hero.roles[0]}`,
+      short_name: site.name.split(' ')[0],
+      description: t.meta.description,
+      lang: l.htmlLang,
+      dir: 'ltr',
+      start_url: l.path,
+      scope: l.path,
+      display: 'standalone',
+      background_color: '#F4F2ED',
+      theme_color: '#F4F2ED',
+      icons: manifestIcons,
+    }, null, 2)}\n`);
   }
 
   // 404 — served by GitHub Pages for any missing path, at any depth: root-absolute URLs only.
@@ -700,39 +803,52 @@ async function build() {
   // robots, sitemap, manifest, .nojekyll
   // No <lastmod>: the build date changes on every deploy whether or not the content did,
   // and search engines ignore lastmod values they cannot trust.
-  await write('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${base}/sitemap.xml\n`);
-  const sitemap = [
-    '<?xml version="1.0" encoding="UTF-8"?>',
-    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">',
-    ...langs.map((l) => [
+  const smName = (l) => `sitemap-${l.code}.xml`;
+  await write('robots.txt', [
+    'User-agent: *',
+    'Allow: /',
+    '',
+    '# For LLMs and AI agents: /llms.txt and /agent.txt (also under /en/ and /zh/)',
+    '',
+    `Sitemap: ${base}/sitemap.xml`,
+    ...langs.map((l) => `Sitemap: ${base}/${smName(l)}`),
+    '',
+  ].join('\n'));
+  for (const l of langs) {
+    const sm = [
+      '<?xml version="1.0" encoding="UTF-8"?>',
+      '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">',
       '  <url>',
       `    <loc>${base}${l.path}</loc>`,
       ...alternates.map((a) => `    <xhtml:link rel="alternate" hreflang="${a.hreflang}" href="${a.href}"/>`),
+      `    <image:image><image:loc>${ogFor(l.code).url}</image:loc></image:image>`,
       '  </url>',
-    ].join('\n')),
-    '</urlset>',
+      '</urlset>',
+      '',
+    ].join('\n');
+    checkWellFormed(sm, smName(l), { xml: true });
+    await write(smName(l), sm);
+  }
+  const sitemap = [
+    '<?xml version="1.0" encoding="UTF-8"?>',
+    '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+    ...langs.map((l) => `  <sitemap><loc>${base}/${smName(l)}</loc></sitemap>`),
+    '</sitemapindex>',
     '',
   ].join('\n');
   checkWellFormed(sitemap, 'sitemap.xml', { xml: true });
   await write('sitemap.xml', sitemap);
 
-  const icons = [{ src: '/favicon.svg', sizes: 'any', type: 'image/svg+xml', purpose: 'any' }];
-  for (const s of [192, 512]) if (has(`icon-${s}.png`)) icons.push({ src: `/icon-${s}.png`, sizes: `${s}x${s}`, type: 'image/png', purpose: 'any' });
-  const manifest = {
-    name: site.name,
-    short_name: site.name.split(' ')[0],
-    description: dicts[def.code].meta.description,
-    lang: def.htmlLang,
-    dir: 'ltr',
-    start_url: '/',
-    scope: '/',
-    display: 'standalone',
-    // One pair, matching the light <meta name="theme-color"> (the manifest has no dark variant).
-    background_color: '#F4F2ED',
-    theme_color: '#F4F2ED',
-    icons,
-  };
-  await write('site.webmanifest', `${JSON.stringify(manifest, null, 2)}\n`);
+  // favicon.ico for clients that only ask for /favicon.ico (a PNG wrapped in an ICO container).
+  if (has('icon-192.png')) {
+    const png = await readFile(path.join(DIST, 'icon-192.png'));
+    const head = Buffer.alloc(22);
+    head.writeUInt16LE(1, 2); head.writeUInt16LE(1, 4);
+    head.writeUInt8(192, 6); head.writeUInt8(192, 7);
+    head.writeUInt16LE(1, 10); head.writeUInt16LE(32, 12);
+    head.writeUInt32LE(png.length, 14); head.writeUInt32LE(22, 18);
+    await write('favicon.ico', Buffer.concat([head, png]));
+  }
   await write('.nojekyll', '');
 
   // Verify every page after everything is on disk (links resolve against dist/).
